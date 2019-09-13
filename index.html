@@ -71,6 +71,31 @@
 		</section>
 		<section>
 			<!-- Блок карты и формы -->
+			<form action="https://echo.htmlacademy.ru" method="post" class="search-hotel">
+				<p>
+					<label for="date_in_field">Дата заезда:</label>
+					<input type="text" name="date_in" id="date_in_field" value="24 апреля 2017" placeholder="введите дату"	><button type="button">Календарь</button>
+				</p>
+				<p>
+					<label for="date_out_field">Дата выезда:</label>
+					<input type="text" name="date_out" id="date_out_field" value="4 июля 2017" placeholder="введите 	дату">
+					<button type="button">Календарь</button>
+				</p>
+				<p>
+					<label for="guest_field">Взрослые:</label>
+					<button type="button">-</button>
+					<input type="number" name="guest" id="guest_field" placeholder="2" min="0" max="20">
+					<button type="button">+</button>
+				</p>
+				<p>
+					<label for="children_field">Дети:</label>
+					<button type="button">-</button>
+					<input type="number" name="children" id="children_field" placeholder="0" min="0" max="20">
+					<button type="button">+</button>
+				</p>
+				<input type="submit" value="Найти">
+			</form>
+			<img src="img/map.jpg" alt="Расположение Седоны ны карте" width="1200" height="593">
 		</section>
 	</main>
 	<footer>
@@ -82,7 +107,7 @@
 		</ul>
 		<p>
 			website by
-		    <a href="https://htmlacademy.ru/">
+		    <a href="https://htmlacademy.ru/intensive/htmlcss">
 		    	<img src="img/logo_name.png" alt="Логотип" width="70" height="33">
 		    </a>
 		</p>

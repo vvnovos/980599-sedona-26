@@ -20,9 +20,58 @@
 	</header>
 
 	<main>
-		<h1>Отели Седоны</h1><!-- скрытый заголовок -->
+		<h1 class="visually-hidden">Отели Седоны</h1><!-- скрытый заголовок -->
 		<section>
 			<!-- форма бронирования -->
+		  	<form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+				<fieldset>
+					<legend>Инфраструктура</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="pool" id="pool_field" checked>
+							<label for="pool_field">Бассейн</label>
+						</li>
+						<li>
+							<input type="checkbox" name="parking" id="parking_field" >
+							<label for="parking_field">Парковка</label>
+						</li>
+						<li>
+							<input type="checkbox" name="wi_fi" id="wi_fi_field" >
+							<label for="wi_fi_field">Wi-Fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Тип жилья</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="hotel" id="hotel_field" checked>
+							<label for="hotel_field">Гостиница</label>
+						</li>
+						<li>
+							<input type="checkbox" name="motel" id="motel_field" checked >
+							<label for="motel_field">Мотель</label>
+						</li>
+						<li>
+							<input type="checkbox" name="apartment" id="apartment_field" checked>
+							<label for="apartment_field">Аппартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+				<div>
+					<p>Стоимость в сутки(р:)</p>
+					<p>
+						<label for="price_min_field" class="visually-hidden">от 0</label>
+						<input type="number" name="price_min" id="price_min_field" min="0" max="3000" placeholder="от 0">
+						<label for="price_maxt_field" class="visually-hidden">до 3000</label>
+						<input type="number" name="price_max" id="price_max_field" min="0" max="3000" placeholder="до 3000" >
+					</p>
+					<p>
+						<input type="range" min="0" max="3000" step="1">
+					</p>
+					<button type="submit">Показать</button>	
+				</div>
+			</form>
 			<p>Найдено:3</p>
 			<p>Сортировка:</p>
 			<ul>
@@ -79,7 +128,7 @@
 		</ul>
 		<p>
 			website by
-		    <a href="https://htmlacademy.ru/">
+		    <a href="https://htmlacademy.ru/intensive/htmlcss">
 		    	<img src="img/logo_name.png" alt="Логотип" width="70" height="33">
 		    </a>
 		</p>
