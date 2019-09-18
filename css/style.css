@@ -1,0 +1,280 @@
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 1280px;
+		
+	font-family: "PT Sans", Verdana, sens-serif;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	color:#000000;
+	text-transform: uppercase;
+
+	background-color: #F2F2F2;
+}
+/*wrapper глобальные настройки*/
+.wrapper{
+	max-width: 1200px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+}
+.wrapper a{
+	text-decoration: none;
+}
+.wrapper ul{
+	list-style: none;
+}
+/*Прячем элементы*/
+.visually-hidden{
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+/*Цвет ссылок в навигации*/
+.site-navigation a{
+	color:#000000;
+}
+.bg_sedona::after{
+	content: url(../img/background_sedona_block_cut.jpg);
+}
+/*Заголовок*/
+.title h1{
+	font-size: 21px;
+	text-align: center;
+}
+.title p{
+	font-weight: 400;
+	text-align: center;
+}
+/*Блок описания и преимуществ*/
+.feature-block {
+	display: inline-block;/*Для видимости белого шрифта*/
+	background-color: #81b3d2; /*Здесь проблема с фоном блока?*/
+}
+.feature-list > .feature-item{
+	background-color: #EDEDED;
+}
+.feature-block h2{
+	font-size: 21px;
+	line-height: 21px;
+	color: #FFFFFF;
+}
+.feature-block > p,
+.feature-block > span{
+	line-height: 21px;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+.feature-item h3{
+	font-size: 21px;
+	line-height: 21px;
+}
+.feature-item p{
+	line-height: 21px;
+	font-weight: 400;
+}
+/*Блок формы поиска и карты*/
+.search-hotel__heading h3{
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+}
+.search-hotel__heading p{
+	line-height: 24px;
+	font-weight: 400;
+	text-align: center;
+}
+.search-hotel__item label,
+.search-hotel__guest label{
+	cursor: pointer;
+}
+.search-hotel__item input,
+.search-hotel__guest input{
+	font-size: 14px;
+	line-height: 26px;
+	color:#000000;
+	text-transform: uppercase;
+	font-weight:700;
+    border: none;	
+	background-color: #f2f2f2;
+	
+}
+.search-hotel__item input:focus,
+.search-hotel__guest input:focus{
+	outline: none;
+}
+.search-hotel__item input:hover,
+.search-hotel__guest input:hover{
+	background-color:#ebebeb;
+}
+.search-hotel__item input:focus,
+.search-hotel__guest input:focus{
+	background-color:#FFFFFF;
+	border:1px solid #E5E5E5;
+}
+/*Кнопки плюс и минус, согласно стайлгайду не оформлены*/
+.btn-plus,
+.btn-minus{
+    width: 38px;
+    height: 38px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #A9A9A9;
+    font-size: 14px;
+    font-weight:700;
+}
+.btn-search{
+	font-size: 21px;
+	line-height: 26px;
+	color:#ffffff;
+	text-transform: uppercase;
+	font-weight:700;
+	border: none;
+}
+.btn-brown{
+	background-color: #766357;
+}
+.btn-brown:hover{
+	background-color:#604E43;
+}
+.btn-brown:active{
+	background-color:#503E33;
+	color:#928A85;
+}
+.btn-blue{
+	background-color:#81B3D2;
+}
+.btn-blue:hover{
+	background-color:#669EC0;
+}
+.btn-blue:active{
+	background-color:#5496BD;
+	color:#94B9D2;
+}
+/*Блок футера*/
+.main-footer > a{
+	font-size: 21px;
+	line-height: 26px;
+	color:#000000;
+}
+.developer-item{
+	line-height: 26px;
+}
+.developer-item img{}/*Менять цвет логотипа при наведении(фон, спрайты?) */
+
+/**************страница inner.html**************/
+
+/*форма фильтра поиска гостиницы*/
+
+.filter-form{
+	width: 1200px;
+	height: 220px;
+	background-color: #85A0BE;
+	background-image: url(../img/background_inner.jpg);
+	background-size: cover;
+	line-height: 21px;
+	font-weight: 400;
+	color:#ffffff;
+	display: flex;
+}
+.filter-form legend,
+.price-title{
+	font-size: 16px;
+	font-weight: 700;
+}
+.filter-form fieldset{
+	border:none;
+} 
+.filter-price input,
+.btn-filter{
+	text-transform: uppercase;
+	color:#ffffff;
+	line-height: 21px;
+	font-weight: 400;
+	border: none;
+	background-color: transparent;
+	border:2px solid #ffffff;
+}
+.filter-option label,
+.filter-price button,
+.filter-price input{
+	cursor: pointer;
+}
+.filter-price button:hover{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+/*Информационная строка сортировки*/
+.filter  p{
+	font-size: 21px;
+}
+.sort-price,
+.filter  p + p{
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+}
+.sort-price a{
+	color: #dadada;
+	border-bottom:1px dotted #81B3D2;
+}
+.sort-price a:hover{
+	color: #81B3D2;
+}
+.sort-price a:active{
+	color: #000000;
+	border-bottom: none;
+}
+.sort-price .active{
+	color: #81B3D2;
+}
+/*Результаты поиска*/
+.filter-result h2 a{
+	color:#000000;
+	font-size: 21px;
+}
+.filter-result h2 a:hover{
+	color: #81B3D2;
+}
+.filter-result h2 a:active{
+	color: #b2b2b2;
+}
+.filter-result p{
+	line-height: 21px;
+	font-weight: 400;
+}
+.filter-result p:last-child{
+	color:#666666;
+}
+.filter-result a:nth-of-type(2){
+	color:#ffffff;
+	line-height: 21px;
+}
+.filter-result a:nth-of-type(3){
+	color:#ffffff;
+	line-height: 21px;
+}
+/*Стрелки сортировки по возрастанию-убыванию*/
+.sort-range li{
+	display: inline-block;
+
+}
+
+.arrow::before {
+	content: "";
+	border:10px solid black;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.arrow-down::before{
+	border-bottom-width: 0;
+}	
+.arrow-up::before {
+	border-top-width: 0;
+	vertical-align: middle;
+.arrow{
+	font-size: 0;
+	line-height: 0;
+}
