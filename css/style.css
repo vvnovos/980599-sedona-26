@@ -34,8 +34,21 @@ body {
 .site-navigation a{
 	color:#000000;
 }
-.bg_sedona::after{
-	content: url(../img/background_sedona_block_cut.jpg);
+.site-navigation a:hover{
+	color: #81b3d2;
+}
+.site-navigation a:active{
+	color: rgba(0,0,0,0.3);
+}
+
+.site-navigation .active {
+	color:#766357;
+	pointer-events:none;
+}
+.block-welcome{
+	background-color: #8D888A;
+	background-image: url(../img/background_photo_sedona.jpg);
+	background-position: center;
 }
 /*Заголовок*/
 .title h1{
@@ -47,25 +60,22 @@ body {
 	text-align: center;
 }
 /*Блок описания и преимуществ*/
-.feature-block {
+.feature-item-large {
 	display: inline-block;/*Для видимости белого шрифта*/
 	background-color: #81b3d2; /*Здесь проблема с фоном блока?*/
 }
-.feature-list > .feature-item{
-	background-color: #EDEDED;
+.feature-item-grey{
+	background-color: #EEEEEE;
 }
-.feature-block h2{
-	font-size: 21px;
-	line-height: 21px;
+.feature-item-large h2{
 	color: #FFFFFF;
 }
-.feature-block > p,
-.feature-block > span{
-	line-height: 21px;
+.feature-item-large > p,
+.feature-item-large > span{
 	color: #FFFFFF;
-	font-weight: 400;
 }
-.feature-item h3{
+.feature-item h3,
+.feature-item h2{
 	font-size: 21px;
 	line-height: 21px;
 }
@@ -85,7 +95,8 @@ body {
 	text-align: center;
 }
 .search-hotel__item label,
-.search-hotel__guest label{
+.search-hotel__guest label,
+.btn-search{
 	cursor: pointer;
 }
 .search-hotel__item input,
@@ -100,7 +111,8 @@ body {
 	
 }
 .search-hotel__item input:focus,
-.search-hotel__guest input:focus{
+.search-hotel__guest input:focus,
+.btn-search:focus{
 	outline: none;
 }
 .search-hotel__item input:hover,
@@ -126,30 +138,31 @@ body {
 .btn-search{
 	font-size: 21px;
 	line-height: 26px;
-	color:#ffffff;
 	text-transform: uppercase;
 	font-weight:700;
 	border: none;
 }
 .btn-brown{
 	background-color: #766357;
+	color:#ffffff;
 }
 .btn-brown:hover{
 	background-color:#604E43;
 }
 .btn-brown:active{
 	background-color:#503E33;
-	color:#928A85;
+	color:rgba(255,255,255,0.3);
 }
 .btn-blue{
 	background-color:#81B3D2;
+	color:#ffffff;
 }
 .btn-blue:hover{
 	background-color:#669EC0;
 }
 .btn-blue:active{
 	background-color:#5496BD;
-	color:#94B9D2;
+	color:rgba(255,255,255,0.3);
 }
 /*Блок футера*/
 .main-footer > a{
@@ -160,7 +173,6 @@ body {
 .developer-item{
 	line-height: 26px;
 }
-.developer-item img{}/*Менять цвет логотипа при наведении(фон, спрайты?) */
 
 /**************страница inner.html**************/
 
@@ -215,8 +227,11 @@ body {
 	font-weight: 400;
 }
 .sort-price a{
-	color: #dadada;
+	color: rgba(0, 0, 0, 0.3);
 	border-bottom:1px dotted #81B3D2;
+}
+.sort-price .active{
+	color: #81B3D2;
 }
 .sort-price a:hover{
 	color: #81B3D2;
@@ -225,19 +240,17 @@ body {
 	color: #000000;
 	border-bottom: none;
 }
-.sort-price .active{
-	color: #81B3D2;
-}
+
 /*Результаты поиска*/
-.filter-result h2 a{
+.hotel-name a{
 	color:#000000;
 	font-size: 21px;
 }
-.filter-result h2 a:hover{
+.hotel-name a:hover{
 	color: #81B3D2;
 }
-.filter-result h2 a:active{
-	color: #b2b2b2;
+.hotel-name a:active{
+	color: rgba(0,0,0,0.3);
 }
 .filter-result p{
 	line-height: 21px;
@@ -246,35 +259,7 @@ body {
 .filter-result p:last-child{
 	color:#666666;
 }
-.filter-result a:nth-of-type(2){
-	color:#ffffff;
+.filter-result .btn-blue,
+.filter-result .btn-brown{
 	line-height: 21px;
-}
-.filter-result a:nth-of-type(3){
-	color:#ffffff;
-	line-height: 21px;
-}
-/*Стрелки сортировки по возрастанию-убыванию*/
-.sort-range li{
-	display: inline-block;
-
-}
-
-.arrow::before {
-	content: "";
-	border:10px solid black;
-	border-left-width: 5px;
-	border-right-width: 5px;
-	border-left-color: transparent;
-	border-right-color: transparent;
-}
-.arrow-down::before{
-	border-bottom-width: 0;
-}	
-.arrow-up::before {
-	border-top-width: 0;
-	vertical-align: middle;
-.arrow{
-	font-size: 0;
-	line-height: 0;
 }
