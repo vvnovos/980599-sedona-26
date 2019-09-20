@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet"  href="css/normalize.css">
-    <link rel="stylesheet"  href="css/style.css">
-  </head>
-  <body>
-  	<div class="wrapper">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Academy: Седона</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet"  href="css/normalize.css">
+	<link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="header-logo">
@@ -33,9 +33,9 @@
 			</div>
 			<ul class="feature-list">
 				<li class="feature-item feature-item-large">
-					<h2>Настоящий городок</h2>
-					<span>№1</span>
-					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+					<h2 class="feature-item-title">Настоящий городок</h2>
+					<span class="feature-item-number">№1</span>
+					<p class="feature-item-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 					<img src="img/real_town_1.jpg" alt="Седона" width="800" height="256">
 					<ul>
 						<li class="feature-item">
@@ -51,12 +51,12 @@
 							<p>Не только китайского, но и местного производства!</p>
 						</li>
 					</ul>
-			 	</li>
-			    <li class="feature-item feature-item-large">
-			 		<img src="img/devil's_bridge_2.jpg" alt="Седона:Мост Дьявола" width="800" height="256">
-			 		<h2>Там есть мост дьявола</h2>
-			 		<span>№2</span>
-			 		<p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+				</li>
+				<li class="feature-item feature-item-large">
+					<img src="img/devil's_bridge_2.jpg" alt="Седона:Мост Дьявола" width="800" height="256">
+					<h2 class="feature-item-title">Там есть мост дьявола</h2>
+					<span class="feature-item-number">№2</span>
+					<p class="feature-item-text">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
 				</li>
 				<li class="feature-item feature-item-grey">
 					<h3>Небольшая площадь</h3>
@@ -89,7 +89,7 @@
 					</p>
 					<p class="search-hotel__item">
 						<label for="date_out_field">Дата выезда:</label>
-						<input type="text" name="date_out" id="date_out_field" value="4 июля 2017" placeholder="введите 	дату">
+						<input type="text" name="date_out" id="date_out_field" value="4 июля 2017" placeholder="введите	дату">
 						<button type="button">Календарь</button>
 					</p>
 					<p class="search-hotel__guest">
@@ -112,17 +112,23 @@
 		<footer class="main-footer">
 			<a  href="https://visitsedona.com/">#visitSEDONA</a>
 			<ul class="footer-social">
-				<li><a class="social-btn" href="https://twitter.com/hashtag/visitsedona" aria-label="Sedona in Twitter">twitter</a></li>
-				<li><a class="social-btn" href="https://www.facebook.com/pg/VisitSedona/posts/" aria-label="Sedona in Facebook">facebook</a></li>
-				<li><a class="social-btn" href="https://www.youtube.com/user/SedonaAZ1" aria-label="Sedona on Youtube">youtube</a></li>
+				<li>
+					<a class="social-btn" href="https://twitter.com/hashtag/visitsedona" aria-label="Sedona in Twitter">twitter</a>
+				</li>
+				<li>
+				  <a class="social-btn" href="https://www.facebook.com/pg/VisitSedona/posts/" aria-label="Sedona in Facebook">facebook</a>
+				</li>
+				<li>
+					<a class="social-btn" href="https://www.youtube.com/user/SedonaAZ1" aria-label="Sedona on Youtube">youtube</a>
+				</li>
 			</ul>
 			<p class="developer-item">
 				website by
-			    <a href="https://htmlacademy.ru/intensive/htmlcss">
-			    	<img src="img/logo_name.png" alt="Логотип" width="70" height="33">
-			    </a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/logo_name.png" alt="Логотип" width="70" height="33">
+				</a>
 			</p>
 		</footer>
 	</div>
-  </body>
+</body>
 </html>

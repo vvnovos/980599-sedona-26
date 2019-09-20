@@ -1,4 +1,4 @@
-body {
+body{
 	margin: 0;
 	padding: 0;
 	max-width: 1280px;
@@ -7,7 +7,7 @@ body {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
-	color:#000000;
+	color: #000000;
 	text-transform: uppercase;
 
 	background-color: #F2F2F2;
@@ -32,7 +32,7 @@ body {
 }
 /*Цвет ссылок в навигации*/
 .site-navigation a{
-	color:#000000;
+	color: #000000;
 }
 .site-navigation a:hover{
 	color: #81b3d2;
@@ -41,8 +41,8 @@ body {
 	color: rgba(0,0,0,0.3);
 }
 
-.site-navigation .active {
-	color:#766357;
+.site-navigation .active{
+	color: #766357;
 	pointer-events:none;
 }
 .block-welcome{
@@ -54,24 +54,22 @@ body {
 .title h1{
 	font-size: 21px;
 	text-align: center;
+	line-height: 26px;
 }
 .title p{
 	font-weight: 400;
 	text-align: center;
 }
 /*Блок описания и преимуществ*/
-.feature-item-large {
-	display: inline-block;/*Для видимости белого шрифта*/
+.feature-item-large{
 	background-color: #81b3d2; /*Здесь проблема с фоном блока?*/
 }
 .feature-item-grey{
 	background-color: #EEEEEE;
 }
-.feature-item-large h2{
-	color: #FFFFFF;
-}
-.feature-item-large > p,
-.feature-item-large > span{
+.feature-item-title,
+.feature-item-text,
+.feature-item-number{
 	color: #FFFFFF;
 }
 .feature-item h3,
@@ -79,7 +77,8 @@ body {
 	font-size: 21px;
 	line-height: 21px;
 }
-.feature-item p{
+.feature-item p,
+.feature-item span{
 	line-height: 21px;
 	font-weight: 400;
 }
@@ -103,12 +102,11 @@ body {
 .search-hotel__guest input{
 	font-size: 14px;
 	line-height: 26px;
-	color:#000000;
+	color: #000000;
 	text-transform: uppercase;
 	font-weight:700;
-    border: none;	
+  border: none;	
 	background-color: #f2f2f2;
-	
 }
 .search-hotel__item input:focus,
 .search-hotel__guest input:focus,
@@ -117,23 +115,23 @@ body {
 }
 .search-hotel__item input:hover,
 .search-hotel__guest input:hover{
-	background-color:#ebebeb;
+	background-color: #ebebeb;
 }
 .search-hotel__item input:focus,
 .search-hotel__guest input:focus{
-	background-color:#FFFFFF;
-	border:1px solid #E5E5E5;
+	background-color: #FFFFFF;
+  border:1px solid #E5E5E5;
 }
 /*Кнопки плюс и минус, согласно стайлгайду не оформлены*/
 .btn-plus,
 .btn-minus{
-    width: 38px;
-    height: 38px;
-    border: none;
-    background-color: #f2f2f2;
-    color: #A9A9A9;
-    font-size: 14px;
-    font-weight:700;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #A9A9A9;
+  font-size: 14px;
+  font-weight:700;
 }
 .btn-search{
 	font-size: 21px;
@@ -144,31 +142,31 @@ body {
 }
 .btn-brown{
 	background-color: #766357;
-	color:#ffffff;
+	color: #ffffff;
 }
 .btn-brown:hover{
-	background-color:#604E43;
+	background-color: #604E43;
 }
 .btn-brown:active{
-	background-color:#503E33;
-	color:rgba(255,255,255,0.3);
+	background-color: #503E33;
+	color: rgba(255,255,255,0.3);
 }
 .btn-blue{
-	background-color:#81B3D2;
-	color:#ffffff;
+	background-color: #81B3D2;
+	color: #ffffff;
 }
 .btn-blue:hover{
-	background-color:#669EC0;
+	background-color: #669EC0;
 }
 .btn-blue:active{
-	background-color:#5496BD;
-	color:rgba(255,255,255,0.3);
+	background-color: #5496BD;
+	color: rgba(255,255,255,0.3);
 }
 /*Блок футера*/
 .main-footer > a{
 	font-size: 21px;
 	line-height: 26px;
-	color:#000000;
+	color: #000000;
 }
 .developer-item{
 	line-height: 26px;
@@ -186,7 +184,7 @@ body {
 	background-size: cover;
 	line-height: 21px;
 	font-weight: 400;
-	color:#ffffff;
+	color: #ffffff;
 	display: flex;
 }
 .filter-form legend,
@@ -200,7 +198,7 @@ body {
 .filter-price input,
 .btn-filter{
 	text-transform: uppercase;
-	color:#ffffff;
+	color: #ffffff;
 	line-height: 21px;
 	font-weight: 400;
 	border: none;
@@ -217,11 +215,11 @@ body {
 	color: #000000;
 }
 /*Информационная строка сортировки*/
-.filter  p{
-	font-size: 21px;
+.filter p{
+	line-height: 21px;
 }
 .sort-price,
-.filter  p + p{
+.filter-sort{
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
@@ -243,7 +241,7 @@ body {
 
 /*Результаты поиска*/
 .hotel-name a{
-	color:#000000;
+	color: #000000;
 	font-size: 21px;
 }
 .hotel-name a:hover{
@@ -257,9 +255,11 @@ body {
 	font-weight: 400;
 }
 .filter-result p:last-child{
-	color:#666666;
+	color: #666666;
 }
 .filter-result .btn-blue,
 .filter-result .btn-brown{
 	line-height: 21px;
 }
+																		
+				
