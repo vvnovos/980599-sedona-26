@@ -1,8 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	max-width: 1280px;
-		
+			
 	font-family: "PT Sans", Verdana, sens-serif;
 	font-size: 14px;
 	line-height: 26px;
@@ -23,6 +22,7 @@ body{
 }
 .wrapper ul{
 	list-style: none;
+	padding: 0;
 }
 /*Прячем элементы*/
 .visually-hidden{
@@ -40,7 +40,6 @@ body{
 .site-navigation a:active{
 	color: rgba(0,0,0,0.3);
 }
-
 .site-navigation .active{
 	color: #766357;
 	pointer-events:none;
@@ -61,9 +60,6 @@ body{
 	text-align: center;
 }
 /*Блок описания и преимуществ*/
-.feature-item-large{
-	background-color: #81b3d2; /*Здесь проблема с фоном блока?*/
-}
 .feature-item-grey{
 	background-color: #EEEEEE;
 }
@@ -88,7 +84,7 @@ body{
 	line-height: 36px;
 	text-align: center;
 }
-.search-hotel__heading p{
+.search-hotel__heading{
 	line-height: 24px;
 	font-weight: 400;
 	text-align: center;
@@ -163,9 +159,8 @@ body{
 	color: rgba(255,255,255,0.3);
 }
 /*Блок футера*/
-.main-footer > a{
+.vizitsedona a{
 	font-size: 21px;
-	line-height: 26px;
 	color: #000000;
 }
 .developer-item{
@@ -263,3 +258,134 @@ body{
 }
 																		
 				
+/*******************************************/
+/**                 Сетки                 **/
+/* *****************************************/
+
+/*Меню и блок Welcome*/
+.main-navigation{
+	position: relative;
+}
+.header-logo{
+	position: absolute;
+	left: 50%;
+	margin-left: -70px;
+}
+.site-navigation{
+	width: 1200px;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.site-navigation li{
+	width: 239px;
+	text-align: center;
+	line-height:56px;
+}
+.site-navigation li:nth-child(2){
+	margin-right: auto;
+}
+.block-welcome{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title-welcome{
+	margin-top: 76px;
+}
+/*Блок преимуществ(feature-list)*/
+
+.feature-list{
+	display: flex;
+	flex-wrap: wrap;
+}
+.feature-item-large{
+	display: flex;
+	background-color: #81b3d2;
+}	
+.feature-item-small{
+	display: flex;
+}
+.feature-large-block,
+.feature-item-grey,
+.feature-item-small .feature-item{
+	min-width: 400px;
+}
+/*Футер*/
+.main-footer{
+	display: flex;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 37px 0;
+}
+.footer-social{
+	display: flex;
+	width: 400px;
+	justify-content:center;
+	margin: auto;
+}
+.vizitsedona{
+	margin-left: 132px;
+}	
+.developer-item{
+	margin-right: 102px;
+}
+/**************inner.html*****************/
+
+/*Форма*/
+.infrastructure-list,
+.housing-list{
+ 	 padding: 0;
+}
+.filter-form{
+	padding-left:72px;
+	box-sizing: border-box;
+}
+.housing-list{
+	margin-left: 115px;
+}
+.filter-price{
+	margin-left: 349px;
+}
+.filter-form-result,
+.sort-price,
+.sort-range{
+	display: flex;
+}
+.filter-form-result{
+	align-items: baseline;
+	border-bottom: 1px solid #e5e5e5;
+}
+/*Результаты сортировки гостиниц*/
+.filter-result{
+	display: flex;
+	padding: 30px 72px;
+	justify-content: space-between;
+	border-bottom: 1px solid #e5e5e5;
+}
+.filter-result > p{
+	margin-left: auto;
+}
+.filter-result-item{
+	display: flex;
+	width: 258px;
+	margin-left: 30px;
+	flex-direction: column;
+}
+.filter-result-details{
+	display: flex;
+	justify-content: space-between;
+}
+.filter-result-item h2{
+	margin-top: 0;
+	margin-bottom: 6px;
+}
+.filter-result-item p{
+	margin-top: 0;
+	margin-bottom: 11px;
+}
+.filter-result-details .btn-blue,
+.filter-result-details .btn-brown{
+	padding: 4px 16px;
+}
+
