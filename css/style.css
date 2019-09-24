@@ -25,14 +25,27 @@ body{
 	padding: 0;
 }
 /*Прячем элементы*/
-.visually-hidden{
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*Цвет ссылок в навигации*/
 .site-navigation a{
 	color: #000000;
+	display: block;
 }
 .site-navigation a:hover{
 	color: #81b3d2;
@@ -79,12 +92,12 @@ body{
 	font-weight: 400;
 }
 /*Блок формы поиска и карты*/
-.search-hotel__heading h3{
+.search-hotel-heading h3{
 	font-size: 30px;
 	line-height: 36px;
 	text-align: center;
 }
-.search-hotel__heading{
+.search-hotel-heading{
 	line-height: 24px;
 	font-weight: 400;
 	text-align: center;
@@ -249,7 +262,7 @@ body{
 	line-height: 21px;
 	font-weight: 400;
 }
-.filter-result p:last-child{
+.filter-result .hotel-rating{ /*Пришлось добавить специфичности. "p.hotel-rating"-нельзя?*/
 	color: #666666;
 }
 .filter-result .btn-blue,
@@ -269,69 +282,67 @@ body{
 .header-logo{
 	position: absolute;
 	left: 50%;
-	margin-left: -70px;
+	transform: translate(-50%);
 }
 .site-navigation{
-	width: 1200px;
 	margin: 0;
 	display: flex;
 	justify-content: space-between;
 }
 .site-navigation li{
-	width: 239px;
+	width: 20%;
 	text-align: center;
 	line-height:56px;
 }
-.site-navigation li:nth-child(2){
+.site-navigation li:nth-child(2){ 
 	margin-right: auto;
 }
-.block-welcome{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.block-welcome img{
+	display: block;
+	margin:0 auto;
 }
 .title-welcome{
 	margin-top: 76px;
 }
 /*Блок преимуществ(feature-list)*/
 
-.feature-list{
+.feature-list,
+.feature-item-large{
 	display: flex;
 	flex-wrap: wrap;
 }
-.feature-item-large{
-	display: flex;
+.feature-large-block{
 	background-color: #81b3d2;
 }	
-.feature-item-small{
-	display: flex;
-}
-.feature-large-block,
+/*.feature-large-block,
 .feature-item-grey,
-.feature-item-small .feature-item{
-	min-width: 400px;
+.feature-item-white{
+	width:33.3333%;
+}*/
+.feature-item,
+.feature-large-block{
+	width: 33.3333%;
+}
+.feature-item-large{
+	width: 100%;
 }
 /*Футер*/
 .main-footer{
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: stretch;
 	background: rgba(255, 255, 255, 0.9);
-	padding: 37px 0;
+}
+.block-footer{
+	line-height: 120px; /*Насколько это правильно? Или лучше паддингом? */
+	width:33.3333%;
+  text-align: center;
 }
 .footer-social{
 	display: flex;
-	width: 400px;
 	justify-content:center;
-	margin: auto;
 }
-.vizitsedona{
-	margin-left: 132px;
-}	
-.developer-item{
-	margin-right: 102px;
-}
-/**************inner.html*****************/
-
+/***************inner.html******************/
 /*Форма*/
 .infrastructure-list,
 .housing-list{
