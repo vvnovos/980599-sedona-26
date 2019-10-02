@@ -69,28 +69,31 @@
 							<label for="price_max_field" class="visually-hidden">до 3000</label>
 							<input type="text" name="price_max" id="price_max_field" value="до 3000" placeholder="до 3000" pattern="^[0-9]+$">
 						</p>
-						<p>
-							<input type="range" min="0" max="3000" step="1">
+						<p class="price-range">
+							<label for="price_range_line" aria-label="Диапазон выбора стоимости отеля в сутки"></label>
+							<input type="range" id="price_range_line" min="0" max="3000" step="1">
 						</p>
 						<button class="btn-filter" type="submit">Показать</button>	
 					</div>
 				</form>
 				<div class="filter-form-result">
-					<p>Найдено:3</p>
-					<p class="filter-sort">Сортировка:</p>
-					<ul class="sort-price">
-						<li><a  class="active">По цене</a></li>
-						<li><a href="#">По типу</a></li>
-						<li><a href="#">По рейтингу</a></li>
-					</ul>
+					<div class="filter-sort-block">
+						<p>Найдено:3</p>
+						<p class="filter-sort">Сортировка:</p>
+						<ul class="sort-price">
+							<li><a  class="active">По цене</a></li>
+							<li><a href="#">По типу</a></li>
+							<li><a href="#">По рейтингу</a></li>
+						</ul>
+					</div>
 					<ul class="sort-range">
-						<li><a href="#">По возрастанию</a></li>
-						<li><a href="#">По убыванию</a></li>
+						<li><a href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+						<li><a class="active"><span class="visually-hidden">По убыванию</span></a></li>
 					</ul>
 				</div>
 			</section>
 			<ul>
-				<li class="filter-result">
+				<li class="filter-result amararesort">
 					<a href="https://www.amararesort.com/">
 						<img src="img/hotel_amar.jpg" alt="Amara Resort &amp; Spa" width="135" height="90">
 					</a>
@@ -111,7 +114,7 @@
 				  </div>
 					<p class="hotel-rating">Рейтинг 8.5</p>
 			  </li>
-				<li class="filter-result">
+				<li class="filter-result desertquailinn">
 					<a href="https://www.desertquailinn.com/">
 						<img src="img/hotel_desert.jpg" alt="Desert Quail Inn" width="135" height="90">
 					</a>
@@ -132,7 +135,7 @@
 					</div>
 					<p class="hotel-rating">Рейтинг 8.9</p>
 				</li>
-				<li class="filter-result">
+				<li class="filter-result villasatpocodiablo">
 					<a href="https://villasatpocodiablo.com/">
 						<img src="img/hotelt_poco_diablo.jpg" alt="Villas at Poco Diablo" width="135" height="90">
 					</a>

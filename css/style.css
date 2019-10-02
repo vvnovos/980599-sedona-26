@@ -16,6 +16,7 @@ body{
 	max-width: 1200px;
 	background-color: #FFFFFF;
 	margin: 0 auto;
+	box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 .wrapper a{
 	text-decoration: none;
@@ -60,7 +61,7 @@ input[type="radio"].visually-hidden {
 }
 .block-welcome{
 	height: 100%;
-	background-color: #8D888A;
+	background-color: rgba(171,171,171, 0.5);
 	background-image:url(../img/mask_welcome.svg), url(../img/background_photo_sedona.jpg);
 	background-repeat: no-repeat;
   margin: 0;
@@ -138,7 +139,12 @@ input[type="radio"].visually-hidden {
   border:1px solid #E5E5E5;
 }
 .map{
-	display: block;
+	background-color: rgba(171,171,171, 0.5);
+	background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 595px;
+  border: 0;
 }
 .btn-plus,
 .btn-minus{
@@ -200,7 +206,7 @@ input[type="radio"].visually-hidden {
 .filter-form{
 	width: 1200px;
 	height: 220px;
-	background-color: #85A0BE;
+	background-color: rgba(171,171,171, 0.5);
 	background-image: url(../img/background_inner.jpg);
 	background-size: cover;
 	line-height: 21px;
@@ -225,7 +231,6 @@ input[type="radio"].visually-hidden {
 	border: none;
 	background-color: transparent;
 	outline: 2px solid #ffffff;
-
 }
 .filter-option label,
 .filter-price button,
@@ -325,6 +330,7 @@ input[type="radio"].visually-hidden {
 .feature-item-large{
 	display: flex;
 	flex-wrap: wrap;
+	width: 1200px;
 }
 .feature-large-block{
 	background-color: #81b3d2;
@@ -376,6 +382,7 @@ input[type="radio"].visually-hidden {
 .filter-form-result{
 	align-items: baseline;
 	border-bottom: 1px solid #e5e5e5;
+	font-size: 21px;
 }
 /*Результаты сортировки гостиниц*/
 .filter-result{
@@ -384,8 +391,13 @@ input[type="radio"].visually-hidden {
 	justify-content: space-between;
 	border-bottom: 1px solid #e5e5e5;
 }
-.filter-result > p{
+.hotel-rating{
 	margin-left: auto;
+	background-color: #F2F2F2;
+	width: 110px;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 .filter-result-item{
 	display: flex;
@@ -505,12 +517,8 @@ input[type="radio"].visually-hidden {
 }
 
 /*Блок формы поиска отелей*/
-.block-search{
-
-}
 .search-hotel-heading{
 	margin-top: 50px;
-
 }
 .search-hotel-heading p{
 	margin-top: 22px;
@@ -521,10 +529,15 @@ input[type="radio"].visually-hidden {
 	display: block;
 	margin: 0 auto;
 	width:568px;
-	margin-bottom: -14px;
 }
 /*Форма поиска*/
-
+.search-form p{
+	margin: 0;
+	margin-bottom: 30px;
+}
+.search-form p.search-hotel__guest{
+	margin-bottom: 54px;
+}
 .search-hotel{
 	position: relative;
 }
@@ -537,43 +550,41 @@ input[type="radio"].visually-hidden {
 	left: 50%;
 	transform:translate(-50%);
 	width:568px;
-	height: 395px;
 	box-sizing: border-box;
-	padding:31px 55px 55px;
+	padding: 55px;
 	box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
 }
 .search-hotel__item{
 	position: relative;
-	margin-bottom: 0px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items:center;
 	width: 100%;
 }
 .search-hotel__item input{
 	box-sizing: border-box;
-  margin-left: 17px;
-	width: 342px;
+	width: 346px;
 	padding: 6px 0 6px 13px;
-	height: 38px; /*Для IE 11*/
+	height: 38px;
+	margin-left: 16px;
 }
 .search-hotel__guest input{
 	width: 40px;
 	padding: 6px 0;
 	text-align: center;
-	height: 24px; /*Для IE 11, тут же гуляющие 14px*/
+	height: 26px;
 }  
 .calendar-date{
 	height: 100%;
 	width: 38px;
 	position:absolute;
 	border: none;
+	outline: none;
 	color: #A9A9A9;
 	left: 420px;
 	top: 0;
 	background-color: transparent;
 	cursor: pointer;
-	outline: none;
 }
 .calendar-date::before{
 	content: "";
@@ -592,7 +603,6 @@ input[type="radio"].visually-hidden {
 .search-hotel__guest{
 	display: flex;
 	align-items: center;
-	margin-bottom: 24px;
 }
 .btn-minus{
 	 margin-left: 27px;
@@ -610,10 +620,8 @@ input[type="radio"].visually-hidden {
 	color: #81B3D2;
 }
 .btn-search.btn-blue{
-	align-self: flex-end;
 	width: 458px;
-	padding-bottom: 16px;
-	padding-top: 16px;
+	line-height: 58px
 }
 /*футер*/
 .inline-svg-icon{
@@ -678,24 +686,17 @@ input[type="radio"].visually-hidden {
 
 /*Чекбоксы*/
 
-.infrastructure-list{
-	outline: 1px solid red;
-}
 .filter-form legend{
 	margin-bottom: 8px;
 }
 .filter-option{
 	position: relative;
-	border: 1px solid orange;
 	margin-bottom: 24px;
 }
-
 .filter-option label{
-	border: 1px solid red;
 	padding-left: 40px;
 }
 .filter-option input{
-	border: 1px solid green;
 	display: none;
 }
 .filter-option label::before,
@@ -723,6 +724,12 @@ input[type="radio"].visually-hidden {
   left: 5px;
   top: 3px;
 }
+.filter-option input[type="checkbox"]:disabled ~ label::after{
+	border: 2px solid #6A6A6A;
+}
+.filter-option input[type="checkbox"]:disabled ~ label::before{
+	border-color: #6A6A6A;
+}
 
 /*Выбор стоимости в сутки*/
 .infrastructure-list{
@@ -730,6 +737,12 @@ input[type="radio"].visually-hidden {
 }
 .housing-list{
 	margin-right: auto;
+}
+.filter-price p{
+	margin: 0;
+}
+.filter-price p.price-title{
+	margin-bottom: 13px;
 }
 .filter-price{
 	width: 314px;
@@ -740,40 +753,131 @@ input[type="radio"].visually-hidden {
 	text-align: center;
 }
 .price-option{
-	outline: 2px solid white;
-	margin-bottom: -6px;
+	border: 2px solid white;
+	border-radius: 2px;
+	box-sizing: border-box;
+	margin-bottom: -6px; /*подымаем input range*/
 	display: flex;
-}
-.price-option input[name="price_min"]{
-	border-right: 1px solid white;
-	width: 50%;
-}
-.housing-list{
-	outline: 1px solid purple;
-}
-.filter-price{
-	border: 1px solid yellow;
-}
-input[type="range"]{
-	width: 100%;
-	height: 2px;
-	padding: 0;
-	outline: none;
 	position: relative;
 }
-input[type="range"]::before{
+.price-option::after{
 	content: "";
+	position: absolute;	
+	height: 22px;
+	top: 5px;
+	left: 50%;
+	border: 1px solid white;
+}
+.price-range input{
+	display: none;
+}
+.filter-price p.price-range{
 	width: 100%;
 	height: 2px;
-	background-color: red;
+	background-color: rgba(255,255,255,0.3);
+	margin-top: 20px;
+	position: relative;
+}
+.price-range label::after{
+	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
+	left:0px;
+	top: 0px;
+	width: 258px;
+	height: 2px;
+	background-color: white;
+}
+.price-range::before,
+.price-range::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -11px;
+	width: 4px;
+	height: 4px;
+	background-color: #ABABAB;
+	border-radius: 50%;
+	border: 8px solid white;
+	z-index: 10;
+}
+.price-range::after{
+	left: 245px;
+}
+.price-range:hover.price-range::before,
+.price-range:hover.price-range::after{
+	border: 10px solid white;
+	cursor: pointer;
 }
 .btn-filter{
 	display: block;
 	margin: 0 auto;
 	width: 133px;
 	padding: 3px 0;
+	margin-top: 34px;
 }
+.filter-form-result p,
+.filter-form-result ul{
+	margin: 0;
+}
+.filter-form-result{
+	padding-left: 72px;
+	padding-right: 72px;
+	justify-content: space-between;
+	padding-top: 29px;
+	padding-bottom: 29px;
+}
+.filter-sort-block{
+	display: flex;
+}
+.sort-price{
+	width: 238px;
+	justify-content: space-between;
+}
+.filter-sort{
+	width: 164px;
+	box-sizing: border-box;
+	padding-left: 49px;
+	margin-left: 0;
+}
+.sort-range a::before{
+	font-size: 14px; 
+	line-height: 18px;
+}
+.sort-range a::before{
+	content: "\25B2";
+	color: #cacaca;
+}
+.sort-range:hover a::before{
+	color: #000000;
+}
+.sort-range:active a::before{
+	color: #81b3d2;
+}
+.sort-range a.active::before{
+	content: "\25BC";
+	color: #81b3d2;
+}
+.filter-result{
+	position: relative;
+}
+.filter-result::after{
+	font-size: 21px;
+	line-height: 26px;
+	color: #81b3d2;
+	position: absolute;
+	right: 72px;
+}
+.filter-result.villasatpocodiablo::after{
+	content: "\2605  \2605";
+}
+.filter-result.desertquailinn::after{
+	content: "\2605  \2605  \2605";
+}
+.filter-result.amararesort::after{
+	content: "\2605  \2605  \2605  \2605";
+}
+.hotel-rating{
+	align-self: flex-end;
+	margin-right: 0;
+}
+
