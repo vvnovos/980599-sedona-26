@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet"  href="css/normalize.css">
-	<link rel="stylesheet"  href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -13,7 +13,7 @@
 			<nav class="main-navigation">
 				<a class="header-logo" href="index.html">
 					<img src="img/logo.svg" alt="Логотип" width="140" height="72">
-				</a> 
+				</a>
 				<ul class="site-navigation">
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Фото и видео</a></li>
@@ -23,9 +23,10 @@
 			</nav>
 		</header>
 		<main class="container">
-			<h1 class="visually-hidden">Отели Седоны</h1><!-- скрытый заголовок -->
+			<h1 class="visually-hidden">Отели Седоны</h1>
 			<section class="filter">
 				<!-- форма бронирования -->
+				<h2 class="visually-hidden">Форма бронирования отелей</h2>
 				<form action="https://echo.htmlacademy.ru" method="get" class="filter-form">
 					<fieldset class="infrastructure-list">
 						<legend>Инфраструктура:</legend>
@@ -45,7 +46,7 @@
 						</ul>
 					</fieldset>
 					<fieldset class="housing-list">
-						<legend >Тип жилья:</legend>
+						<legend>Тип жилья:</legend>
 						<ul>
 							<li class="filter-option">
 								<input type="checkbox" name="hotel" id="hotel_field" checked>
@@ -70,10 +71,10 @@
 							<input type="text" name="price_max" id="price_max_field" value="до 3000" placeholder="до 3000" pattern="^[0-9]+$">
 						</p>
 						<p class="price-range">
-							<label for="price_range_line" aria-label="Диапазон выбора стоимости отеля в сутки"></label>
-							<input type="range" id="price_range_line" min="0" max="3000" step="1">
+							<button type="button" class="price_min" aria-label="Диапазон выбора стоимости отеля в сутки от"></button>
+							<button type="button" class="price_max" aria-label="Диапазон выбора стоимости отеля в сутки до"></button>
 						</p>
-						<button class="btn-filter" type="submit">Показать</button>	
+						<button class="btn-filter" type="submit">Показать</button>
 					</div>
 				</form>
 				<div class="filter-form-result">
@@ -109,11 +110,11 @@
 							<div>
 								<p>От 4000 р.</p>
 								<a class="btn-brown" href="#">Забронировать</a>
-						 	</div>
-						</div>	
-				  </div>
+							</div>
+						</div>
+					</div>
 					<p class="hotel-rating">Рейтинг: 8.5</p>
-			  </li>
+				</li>
 				<li class="filter-result desertquailinn">
 					<a href="https://www.desertquailinn.com/">
 						<img src="img/hotel_desert.jpg" alt="Desert Quail Inn" width="135" height="90">
@@ -176,7 +177,7 @@
 			<p class="developer-item block-footer">
 				<a href="https://htmlacademy.ru/intensive/htmlcss">website by 
 					<svg class="inline-svg-icon">
-						<use xlink:href="#logohtmlacademy"></use>	
+						<use xlink:href="#logohtmlacademy"></use>
 					</svg>
 				</a>
 			</p>
@@ -196,9 +197,9 @@
 						<rect x="74.72" y="1.52" width="1.95" height="12.76" fill=""/>
 						<path d="M370.53,323.31l-0.16,0-15.28,1.6v28L370.37,362l15.28-9.09v-28Zm13.12,28.45-13.28,7.9-13.28-7.9V340.28l13.22,7.87,0,1.43-9.07-5.4v1.38l9.11,5.47,0,1.46-9.1-5.42v1.38l9.11,5.47h0l9.19-5.5v-1.39h0v-4.52l4.1-2.45v11.67Zm0-13.16L380,340.74h0l-1.68,1-8-4.76v1.38l6.84,4.07-0.06,0-0.15.09-1,.57-5.64-3.36v1.38l4.45,2.65-1.05.7,0,0-3.36-2v1.38l2.21,1.3-2.25,1.35-13.16-7.82,13.17-7.92h0Zm0-1.39-13.35-7.87h0l-13.2,7.86v-10.5l13.28-1.39,13.28,1.39v10.51Z" transform="translate(-355.09 -323.29)" fill=""/>
 					</symbol>
-			  </svg>
+				</svg>
 			</div>
 		</footer>
-	</div>	
+	</div>
 </body>
 </html>
