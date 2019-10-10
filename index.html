@@ -19,6 +19,7 @@
 					<li><a href="#">Фото и видео</a></li>
 					<li><a href="#">Карта штата</a></li>
 					<li><a href="inner.html">Гостиницы</a></li>
+				</ul>	
 			</nav>
 		</header>
 		<main class="container">
@@ -82,30 +83,30 @@
 				<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
 			</section>
 			<div>
-				<button class="btn-search btn-brown" type="button">Поиск гостиницы в Седоне</button>
+				<button class="btn-search btn-brown btn-form" type="button">Поиск гостиницы в Седоне</button>
 				<section class="search-hotel">
 					<form action="https://echo.htmlacademy.ru" method="post" class="search-form-hide search-form">
 						<h2 class="visually-hidden">Форма поиска отеля</h2>
 						<p class="search-hotel__item">
 							<label for="date_in_field">Дата заезда:</label>
-							<input type="text" name="date_in" id="date_in_field" value="24 апреля 2017" placeholder="введите дату">
+							<input type="text" name="date_in" id="date_in_field" value="24 апреля 2017" placeholder="введите дату" class="valid" required>
 							<button type="button" class="calendar-date"><span class="visually-hidden">Выбор даты заезда на календаре</span></button>
 						</p>
 						<p class="search-hotel__item">
 							<label for="date_out_field">Дата выезда:</label>
-							<input type="text" name="date_out" id="date_out_field" value="4 июля 2017" placeholder="введите дату">
+							<input type="text" name="date_out" id="date_out_field" value="4 июля 2017" placeholder="введите дату"class="valid" required>
 							<button type="button" class="calendar-date"><span class="visually-hidden">Выбор даты выезда на календаре</span></button>
 						</p>
 						<p class="search-hotel__guest">
 							<label for="guest_field">Взрослые:</label>
 							<button class="btn-minus" type="button"><span class="visually-hidden">Кнопка уменьшения количества взрослых</span></button>
-							<input type="text" name="guest" id="guest_field" value="2">
+							<input type="text" name="guest" id="guest_field" value="2" class="valid" required>
 							<button class="btn-plus" type="button"><span class="visually-hidden">Кнопка увеличения количества взрослых</span></button>
 						</p>
 						<p class="search-hotel__guest">
 							<label for="children_field">Дети:</label>
 							<button class="btn-minus" type="button"><span class="visually-hidden">Кнопка уменьшения количества детей</span></button>
-							<input type="text" name="children" id="children_field" value="0">
+							<input type="text" name="children" id="children_field" value="0" class="valid" required>
 							<button class="btn-plus" type="button"><span class="visually-hidden">Кнопка увеличения количества детей</span></button>
 						</p>
 						<button class="btn-search btn-blue" type="submit">Найти</button>
