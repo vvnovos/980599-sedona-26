@@ -11,23 +11,23 @@ arrive.removeAttribute("required");
 departure.removeAttribute("required");
 children.removeAttribute("required");
 guest.removeAttribute("required");
-arrive.focus();
+searchPopap.classList.add("search-form-hide")
 
 searchLink.addEventListener("click", function(evt){
   evt.preventDefault();
-  searchPopap.classList.toggle("search-form");
+  searchPopap.classList.toggle("search-form-hide")
   arrive.focus();
   searchPopap.classList.remove("search-form-error");
 });
 searchPopap.addEventListener("submit", function(evt){
-  for(var i = 0; i < 4; i++){
+  for(var i = 0; i < input.length; i++){
     if(input[i].value.trim() == ""){
-    evt.preventDefault();
-    searchPopap.classList.remove("search-form-error");
-    searchPopap.offsetWidth = searchPopap.offsetWidth;
-    searchPopap.classList.add("search-form-error");
-    break;
-  }
+      evt.preventDefault();
+      searchPopap.classList.remove("search-form-error");
+      searchPopap.offsetWidth = searchPopap.offsetWidth;
+      searchPopap.classList.add("search-form-error");
+      break;
+    }
   }
 });
 window.addEventListener("keydown", function(evt){

@@ -333,7 +333,7 @@
 .site-navigation li:nth-child(3){
 	padding-right: 73px;
 	text-align: right;
-	letter-spacing: 0.03em; /*Иначе, эта "Карта штата", как положено не попадает*/
+	letter-spacing: 0.03em;
 }
 .site-navigation li:nth-child(4){
 	padding-right: 72px;
@@ -390,7 +390,7 @@
 	margin: 0;
 }
 .block-footer{
-	line-height: 120px; /*Насколько это правильно? Или лучше паддингом? */
+	line-height: 120px;
 	width: 33.3333%;
 	text-align: center;
 }
@@ -642,8 +642,9 @@
 .search-hotel{
 	position: relative;
 }
-.search-form-hide{
-	display: none;
+.btn-form{
+	position: relative;
+	z-index: 10;
 }
 .search-form{
 	display: -webkit-box;
@@ -657,19 +658,24 @@
 	position: absolute;
 	background-color: #FFFFFF;
 	left: 50%;
-	-webkit-transform: translate(-50%);
-	-ms-transform: translate(-50%);
-	transform: translate(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 	width: 568px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 55px;
 	-webkit-box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
 	box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
-	-webkit-animation-name: rise;
-	animation-name: rise;
-	-webkit-animation-duration: 0.8s;
-	animation-duration: 0.8s;
+	z-index: 1;
+	-webkit-transition: 0.5s -webkit-transform;
+	transition: 0.5s -webkit-transform;
+	-o-transition: 0.5s transform;
+	transition: 0.5s transform;
+	transition: 0.5s transform, 0.5s -webkit-transform;
+}
+.search-map-block{
+	overflow: hidden;
 }
 .search-form input::-ms-clear{ /*Для IE: убираем крестик*/
 	display: none;
@@ -1082,24 +1088,9 @@ a.inline-svg-icon:active{
 .filter-result.amararesort::after{
 	content: "\2605  \2605  \2605  \2605";
 }
-@-webkit-keyframes rise{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
-	}
-}
-@keyframes rise{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
-	}
-}
+
 @-webkit-keyframes show{
-	0% {
+	0%{
 	-webkit-transform: translateX(-50%) rotate(45deg);
 	transform: translateX(-50%) rotate(45deg);
 	
@@ -1118,33 +1109,25 @@ a.inline-svg-icon:active{
 	transform: translateX(-50%)rotate(270deg);
 	
 	}
-	100% {
+	100%{
 	-webkit-transform: translateX(-50%) rotate(360deg);
 	transform: translateX(-50%) rotate(360deg);
 	}
 }
 @keyframes show{
-	0% {
-	-webkit-transform: translateX(-50%) rotate(45deg);
+	0%{
 	transform: translateX(-50%) rotate(45deg);
-	
 	}
 	25%{
-	-webkit-transform: translateX(-50%) rotate(90deg);
 	transform: translateX(-50%) rotate(90deg);
-	
 	}
 	50%{
-	-webkit-transform: translateX(-50%) rotate(180deg);
 	transform: translateX(-50%) rotate(180deg);
 	}
 	75%{
-	-webkit-transform: translateX(-50%)rotate(270deg);
 	transform: translateX(-50%)rotate(270deg);
-	
 	}
-	100% {
-	-webkit-transform: translateX(-50%) rotate(360deg);
+	100%{
 	transform: translateX(-50%) rotate(360deg);
 	}
 }
@@ -1154,4 +1137,9 @@ a.inline-svg-icon:active{
 	-webkit-animation-duration: 0.4s;
 	animation-duration: 0.4s;
 	color: red;
+}
+.search-form-hide{
+	-webkit-transform: translate(-50%, -100%);
+	-ms-transform: translate(-50%, -100%);
+	transform: translate(-50%, -100%);
 }
