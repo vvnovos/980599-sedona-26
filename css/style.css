@@ -63,6 +63,7 @@
 	background-color: rgba(171,171,171, 0.5);
 	background-image: url(../img/mask_welcome.svg), url(../img/background_photo_sedona.jpg);
 	background-repeat: no-repeat;
+	background-size: contain;
 	margin: 0;
 	background-position: bottom;
 	padding-top: 76px;
@@ -123,8 +124,6 @@
 	border: none;
 	background-color: #f2f2f2;
 }
-.search-hotel__item input:focus,
-.search-hotel__guest input:focus,
 .btn-search:focus{
 	outline: none;
 }
@@ -135,7 +134,7 @@
 .search-hotel__item input:focus,
 .search-hotel__guest input:focus{
 	background-color: #FFFFFF;
-	border:1px solid #E5E5E5;
+	outline: 1px solid #E5E5E5;
 }
 .map{
 	background-color: rgba(171,171,171, 0.5);
@@ -206,7 +205,7 @@
 /*форма фильтра поиска гостиницы*/
 
 .filter-form{
-	height: 217px;
+	min-height: 217px;
 	background-color: rgba(171,171,171, 0.5);
 	background-image: url(../img/background_inner.jpg);
 	background-size: cover;
@@ -306,6 +305,10 @@
 	transform: translate(-50%);
 	line-height: 0;
 }
+.header-logo img{
+	max-width: 100%;
+	height: auto;
+}
 .site-navigation{
 	margin: 0;
 	display: -webkit-box;
@@ -342,6 +345,8 @@
 .block-welcome img{
 	display: block;
 	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
 }
 .title-welcome{
 	margin-top: 76px;
@@ -366,6 +371,10 @@
 }
 .feature-item-large{
 	width: 100%;
+}
+.feature-item img{
+	max-width: 100%;
+	height: auto;
 }
 /*Футер*/
 .main-footer{
@@ -454,15 +463,22 @@
 	padding-bottom: 32px;
 }
 /*Результаты сортировки гостиниц*/
+
 .filter-result{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	padding: 30px 72px;
 	border-bottom: 1px solid #e5e5e5;
 }
 .filter-result a{
 	line-height: 0;
+}
+.filter-result img{
+	max-width: 100%;
+	height: auto;
 }
 .hotel-rating{
 	margin-left: auto;
@@ -486,6 +502,9 @@
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+}
+.filter-result-details p{
+	width: 110px;
 }
 .filter-result-item h2{
 	margin-top: -5px;
@@ -599,7 +618,7 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	height: 256px;
+	min-height: 256px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -706,9 +725,8 @@
 }
 .search-hotel__guest input{
 	width: 40px;
-	padding: 6px 0;
 	text-align: center;
-	height: 26px;
+	height: 36px;
 }
 .calendar-date{
 	height: 100%;
@@ -779,9 +797,6 @@
 	fill: #81B3D2;
 }
 .developer-item a:active .inline-svg-icon{
-	fill: #BDBBBC
-}
-a.inline-svg-icon:active{
 	fill: #BDBBBC
 }
 .logo_academy_svg{
@@ -1136,10 +1151,13 @@ a.inline-svg-icon:active{
 	animation-name: show;
 	-webkit-animation-duration: 0.4s;
 	animation-duration: 0.4s;
-	color: red;
 }
 .search-form-hide{
 	-webkit-transform: translate(-50%, -100%);
 	-ms-transform: translate(-50%, -100%);
 	transform: translate(-50%, -100%);
+	box-shadow: none;
+}
+.search-form input.error-color{
+	border: 1px solid red;
 }
