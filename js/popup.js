@@ -11,7 +11,7 @@ arrive.removeAttribute("required");
 departure.removeAttribute("required");
 children.removeAttribute("required");
 guest.removeAttribute("required");
-searchPopap.classList.add("search-form-hide")
+searchPopap.classList.add("search-form-hide");
 
 searchLink.addEventListener("click", function(evt){
   evt.preventDefault();
